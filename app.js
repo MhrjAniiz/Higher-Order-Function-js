@@ -1,4 +1,12 @@
-const fruitArray1 = ["apple", "banana", "syau", "lichi", "amba"];
+const fruitArray1 = [
+  "apple",
+  "banana",
+  "syau",
+  "lichi",
+  "amba",
+  "apple",
+  "syau",
+];
 const fruitArray2 = [
   "pineapple",
   "avocado",
@@ -12,7 +20,9 @@ const persons = [
   { name: "Shyam", age: 18 },
   { name: "Hari", age: 27 },
   { name: "Govind", age: 13 },
-  { name: "ram", age: 27 },
+  { name: "ram", age: 18 },
+  { name: "nickace", age: 25 },
+  { name: "sita", age: 18 },
 ];
 const date = [1994, 2020, 1998, 2018, 2019];
 
@@ -57,3 +67,21 @@ console.log("total sum :", sum);
 
 const result = persons.find((person) => (person.name = "anish"));
 console.log("found result:", result);
+
+//using filter and map creating a new array that contains the name of the people that are of age 18
+
+let newArray = persons
+  .filter((result) => {
+    return result.age === 18;
+  })
+  .map((person) => person.name);
+
+console.log(newArray);
+
+//using filter method to removed dublicate elements in fruit1 array
+
+const nonDublicateArray = fruitArray1.filter((fruit, index) => {
+  return fruitArray1.indexOf(fruit) === index;
+});
+
+console.log(nonDublicateArray);

@@ -85,3 +85,7 @@ const nonDublicateArray = fruitArray1.filter((fruit, index) => {
 });
 
 console.log(nonDublicateArray);
+
+// function to find particular data
+const foundData = persons.find((person) => person.name === "nickace");
+console.log(foundData);
